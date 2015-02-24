@@ -29,11 +29,14 @@
 -opaque counter() :: {any(), any()}.
 -opaque reg_obj() :: [counter()].
 
--type option()     :: {queues, [q_spec()]}
-		    | {config, file:name()}
-                    | {group_rates, [{q_name(), [option()]}]}
-		    | {counters,    [{q_name(), [option()]}]}
-		    | {interval, integer()}.
+-type option() :: {atom(), any()}.
+                   
+
+% -type option()     :: {queues, [q_spec()]}
+%		    | {config, file:name()}
+%                    | {group_rates, [{q_name(), [option()]}]}
+%		    | {counters,    [{q_name(), [option()]}]}
+%		    | {interval, integer()}.
 -type timestamp() :: integer().  % microseconds with a special epoch
 
 -type q_name() :: any().
